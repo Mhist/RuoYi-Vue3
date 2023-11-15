@@ -43,6 +43,10 @@ import TreeSelect from '@/components/TreeSelect'
 // 字典标签组件
 import DictTag from '@/components/DictTag'
 
+// 导出为excel
+import JsonExcel from "vue-json-excel/JsonExcel.vue";
+
+
 const app = createApp(App)
 
 // 全局方法挂载
@@ -70,6 +74,7 @@ app.use(store)
 app.use(plugins)
 app.use(elementIcons)
 app.component('svg-icon', SvgIcon)
+app.component("downloadExcel", JsonExcel);
 
 directive(app)
 
